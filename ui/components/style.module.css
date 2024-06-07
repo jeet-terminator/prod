@@ -1,0 +1,45 @@
+div[name="pop-up-windows"] {
+  width: 100%;
+  height: 100%;
+  right: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top : 0;
+  background : black;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+div[name="pop-up-windows"] > *{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+div[name="btn-zone"]{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  z-index: 10;
+  pointer-events: none;
+  position: absolute;
+}
+
+div[name="skip-btn"]{
+ cursor: pointer;
+ margin : auto 50px 50px auto;
+}
+
+div[name="skip-btn"] fast-button{
+  height: auto;
+  padding: 10px;
+}
+
+.vjs-tech {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}

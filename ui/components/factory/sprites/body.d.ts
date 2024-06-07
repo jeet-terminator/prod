@@ -1,0 +1,16 @@
+export declare function Body0(): import("lit-html").TemplateResult<1>;
+export declare function Body1(): import("lit-html").TemplateResult<1>;
+export declare function Body2(): import("lit-html").TemplateResult<1>;
+export declare function Body3(): import("lit-html").TemplateResult<1>;
+export declare function Body4(): import("lit-html").TemplateResult<1>;
+export declare function Body5(): import("lit-html").TemplateResult<1>;
+export declare function Body6(): import("lit-html").TemplateResult<1>;
+export declare function Body7(): import("lit-html").TemplateResult<1>;
+export declare function Body8(): import("lit-html").TemplateResult<1>;
+export declare function Body9(): import("lit-html").TemplateResult<1>;
+export declare function Body10(): import("lit-html").TemplateResult<1>;
+export declare function Body11(): import("lit-html").TemplateResult<1>;
+export declare function Body12(): import("lit-html").TemplateResult<1>;
+export declare function Body13(): import("lit-html").TemplateResult<1>;
+export declare function Body14(): import("lit-html").TemplateResult<1>;
+export declare function Body15(): import("lit-html").TemplateResult<1>;

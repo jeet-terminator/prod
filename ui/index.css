@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Deadknight';
+  src: url('./font/Deadknight.otf') format('opentype');
+}
+
+body {
+  font-family: 'Deadknight', sans-serif;
+  user-select: none;
+}

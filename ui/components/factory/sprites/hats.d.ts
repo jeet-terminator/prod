@@ -1,0 +1,15 @@
+export declare function Hat0(): import("lit-html").TemplateResult<1>;
+export declare function Hat1(): import("lit-html").TemplateResult<1>;
+export declare function Hat2(): import("lit-html").TemplateResult<1>;
+export declare function Hat3(): import("lit-html").TemplateResult<1>;
+export declare function Hat4(): import("lit-html").TemplateResult<1>;
+export declare function Hat5(): import("lit-html").TemplateResult<1>;
+export declare function Hat6(): import("lit-html").TemplateResult<1>;
+export declare function Hat7(): import("lit-html").TemplateResult<1>;
+export declare function Hat8(): import("lit-html").TemplateResult<1>;
+export declare function Hat9(): import("lit-html").TemplateResult<1>;
+export declare function Hat10(): import("lit-html").TemplateResult<1>;
+export declare function Hat11(): import("lit-html").TemplateResult<1>;
+export declare function Hat12(): import("lit-html").TemplateResult<1>;
+export declare function Hat13(): import("lit-html").TemplateResult<1>;
+export declare function Hat14(): import("lit-html").TemplateResult<1>;
