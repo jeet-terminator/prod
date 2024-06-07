@@ -13,69 +13,6 @@ import XIcon from '../ressources/logo X.svg';
 import TGIcon from '../ressources/logo TG.svg';
 import iconSkip from '../ressources/skip.svg';
 
-
-@customElement('lithium-router')
-class Router extends LitElement{
-
-  private _routes = new Routes(this, [
-    // {path: '/', render: () => popUpWindow()},
-    {path: '/factory', render: () => Factory()},
-    {path: '/about', render: () => html`<h1>About</h1>`},
-  ]);
-
-  config:RouteConfig[];
-  header:( x:Router ) => TemplateResult<any>;
-  footer:( x:Router ) => TemplateResult<any>;
-
-  constructor(){
-    
-    super();
-
-    window.addEventListener('hashchange', () => {
-      this.goto();
-    });
-
-    this.goto();
-
-  }
-
-  goto(){
-    this._routes.goto( window.location.hash.replace('#' , '') || '/' )
-  }
-
-  createRenderRoot() {
-    return this; // will render the template without shadow DOM
-  }
-
-  render() {
-
-    return html`
-      <div>
-        ${this.header( this ) || null}
-        <main>
-          ${this._routes.outlet() || null}
-        </main>
-        ${this.footer( this ) || null}
-      </div>
-    `;
-  }
-
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'lithium-router': Router;
-  }
-}
-
-html`<lithium-router 
-  .config=${[
-    { path : '/' , render : () => html`<h1>Hello World</h1>` }
-  ]}
-  .header=${( x:Router ) => { return html`<header>Header</header>` }}
-  .footer=${( x:Router ) => { return html`<footer>Footer</footer>` }}
-/>`
-
 @customElement('main-application')
 class Application extends LitElement{
 
@@ -121,8 +58,8 @@ class Application extends LitElement{
           left : '0'
         })}
       >
-        <header style = ${useStyle({ display : 'grid' , padding : '5px 10px' , gap : '10px'})} >
-          <div style = ${useStyle({ display : 'inline-flex' , gridColumn : 1 , gridRow : 1 , alignItems : 'center' , gap : '10px' })}>
+        <header class = "header" style = ${useStyle({ display : 'grid' , padding : '5px 10px' , gap : '10px'})} >
+          <div style = ${useStyle({ display : 'inline-flex' , gridColumn : 1 , gridRow : 1 , alignItems : 'center' , gap : '10px' , zIndex : 1 , pointerEvents : 'none' })}>
             ${Icon( { svg : TGIcon } )}
             ${Icon( { svg : XIcon } )}
           </div>

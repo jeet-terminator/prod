@@ -4,11 +4,13 @@ import { useStyle , unsafeSVG } from '@lithium-framework/core-dom/directives';
 export function Icon( props:{ svg:string | any , height? : string , mousedown?:(event:MouseEvent) => void , aspectRatio? : string} ){
 
   return html`<div
+    name = "icon"
     @mousedown=${props.mousedown || null}
     style = ${ useStyle({
       display : 'grid',
       height : props.height || "20px",
       aspectRatio : props.aspectRatio || '1/1',
+      pointerEvents : 'all',
       alignItems: 'center',
       cursor : 'pointer'
     }) }

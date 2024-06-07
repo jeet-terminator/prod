@@ -7,3 +7,12 @@ body {
   font-family: 'Deadknight', sans-serif;
   user-select: none;
 }
+
+.header h1:hover{
+  transform: scale(1.2);
+  color: #dc895e;
+}
+
+[name=icon]:hover{
+  transform: scale(1.2);
+}

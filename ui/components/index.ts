@@ -76,17 +76,22 @@ export function HomeContent() {
   return html`<div name='home-content' style=${useStyle({
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "space-between",
+    height : '90%',
     alignItems: "center",
+    paddingTop : '50px'
   })}>
     ${popUpWindow()}
-    ${Icon({ svg : iconFactory , height : '100px' , mousedown : () => window.location.hash = '#/factory' , aspectRatio : '2/1' })}
+    ${Icon({ svg : iconBuy , height : '100px' , aspectRatio : '2/1' })}
     <div name='content' style=${useStyle({
       backgroundImage : 'url(ressources/Tete.svg)',
       backgroundRepeat: 'no-repeat',
-      width: '250px',
-      height: '250px'
+      backgroundSize: "300%",
+      height: "250px",
+      aspectRatio: "1 / 1",
+      backgroundPosition: "center"
     })}></div>
-    ${Icon({ svg : iconBuy , height : '100px' , aspectRatio : '2/1' })}
+    ${Icon({ svg : iconFactory , height : '100px' , mousedown : () => window.location.hash = '#/factory' , aspectRatio : '2/1' })}
+    <p style = ${useStyle({ 'fontFamily': 'auto' })} >CA: E47JhRJ1FCaJWw4AYKcpSDAMuoGcsV1xmz8k1tC65SJs</p>
   </div>`;
 }

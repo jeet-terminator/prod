@@ -77,7 +77,7 @@ export function Slider(props:{ type : 'hat' | 'body' | 'arme' | 'scape' , state:
 
 export function Factory(){
 
-  let [ loading , setLoading ] = createState( null )
+  let [ loading , setLoading ] = createState<any>( null )
 
   let [ config , setConfig ] = createState({
     scapeId : 0,
@@ -129,7 +129,7 @@ export function Factory(){
           } )}
         </div>
       </section>
-      <section style = ${useStyle({ display : 'grid' , alignItems : 'center' , padding: "20px" , gridTemplateRows : '1fr min-content' , borderLeft : '1px solid lightgray' , gap : '10px' })} >
+      <section style = ${useStyle({ display : 'grid' , alignItems : 'center' , padding: "20px" , gridTemplateRows : 'min-content 1fr' , borderLeft : '1px solid lightgray' , gap : '10px' })} >
         <div style = ${ useStyle({ display : 'inline-flex' , alignContent : 'center' , justifyContent : 'end' , paddingBottom : '10px' , gap : '10px' }) } >
           <div 
             style = ${useStyle({ display : 'flex' , alignItems : 'center' , fill : '#fcbd92' , cursor : 'pointer' })} 
@@ -137,7 +137,7 @@ export function Factory(){
 
             setLoading(true)
 
-            toJpeg( container.value ).then((image) => {
+            toJpeg( container.value as HTMLDivElement ).then((image) => {
               download(image , 'my-jeeterminator.jpeg');
 
               setLoading(null)
@@ -173,17 +173,6 @@ export function Factory(){
           ${Slider( { type : 'body' , state : config } )}
           ${Slider( { type : 'arme' , state : config } )}
           ${Slider( { type : 'scape' , state : config } )}
-        </div>
-        <div style = ${ useStyle({ display : 'grid' , alignContent : 'center' , justifyContent : 'center' }) } >
-          <div
-            style = ${useStyle({ 
-              display : 'flex' , 
-              alignItems : 'flex-end' , 
-              width : '200px',
-              cursor : 'pointer'
-            })} >
-            ${unsafeSVG(BuyIcon as any)}
-          </div>
         </div>
       </section>
     </div>
