@@ -47,19 +47,9 @@ class Application extends LitElement{
   render() {
 
     return html`
-      <div
-        style = ${useStyle({
-          display : 'grid',
-          height : '100%',
-          width : '100%',
-          position : 'fixed',
-          gridTemplateRows : 'min-content 1fr',
-          top : '0',
-          left : '0'
-        })}
-      >
+      <div id="page">
         <header class = "header" style = ${useStyle({ display : 'grid' , padding : '5px 10px' , gap : '10px'})} >
-          <div style = ${useStyle({ display : 'inline-flex' , gridColumn : 1 , gridRow : 1 , alignItems : 'center' , gap : '10px' , zIndex : 1 , pointerEvents : 'none' })}>
+          <div id="icons">
             ${Icon( { svg : TGIcon , mousedown : () => { window.open( "https://t.me/jeeterminatorsol" ) } } )}
             ${Icon( { svg : XIcon , mousedown : () => { window.open( "https://x.com/JEETERMINATOR" ) } } )}
           </div>

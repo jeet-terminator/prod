@@ -1,23 +1,74 @@
 @font-face {
-  font-family: 'Deadknight';
-  src: url('./font/Deadknight.otf') format('opentype');
+    font-family: 'Deadknight';
+    src: url('./font/Deadknight.otf') format('opentype');
 }
 
 body {
-  font-family: 'Deadknight', sans-serif;
-  user-select: none;
+    font-family: 'Deadknight', sans-serif;
+    user-select: none;
 }
 
-.header h1:hover{
-  transform: scale(1.2);
-  color: #dc895e;
+.header h1:hover {
+    transform: scale(1.2);
+    color: #dc895e;
 }
 
-[name=icon]:hover{
-  transform: scale(1.2);
+[name=icon]:hover {
+    transform: scale(1.2);
 }
 
 polygon#XMLID_5471_,
 polygon#XMLID_5371_ {
-  fill: white;
+    fill: white;
+}
+
+#sliderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;;
+    z-index: 1;
+    width: 95%;
+    margin: 2rem auto;
+    overflow: hidden;
+    max-width: 1000px;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px dimgray
+}
+
+#page {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: min-content 1fr;
+    top: 0;
+    left: 0;
+}
+
+#icons {
+   display: none;
+}
+
+@media (min-width: 768px) {
+    #page {
+        position: fixed;
+
+    }
+
+    #icons {
+        display: inline-flex;
+        grid-column: 1;
+        grid-row: 1;
+        align-items: center;
+        gap: 10px;
+        z-index: 1;
+        pointer-events: none
+    }
+    #sliderContainer {
+        flex-direction: row;
+        overflow: auto;
+        width: auto;
+    }
 }

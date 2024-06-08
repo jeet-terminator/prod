@@ -92,6 +92,6 @@ export function HomeContent() {
       backgroundPosition: "center"
     })}></div>
     ${Icon({ svg : iconFactory , height : '100px' , mousedown : () => window.location.hash = '#/factory' , aspectRatio : '2/1' })}
-    <p style = ${useStyle({ 'fontFamily': 'auto' })} >CA: E47JhRJ1FCaJWw4AYKcpSDAMuoGcsV1xmz8k1tC65SJs</p>
+    <p style = ${useStyle({ fontFamily: 'auto', padding: '2rem', wordBreak: 'break-all' })} >CA: E47JhRJ1FCaJWw4AYKcpSDAMuoGcsV1xmz8k1tC65SJs</p>
   </div>`;
 }

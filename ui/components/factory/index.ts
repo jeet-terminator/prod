@@ -1,4 +1,4 @@
-import { html } from '@lithium-framework/core-dom';
+import { html } from '@lithium-framework/core-dom';
 import { useStyle , useState , unsafeSVG , createRef , ref } from '@lithium-framework/core-dom/directives';
 
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
@@ -113,7 +113,7 @@ export function Factory(){
         return html``;
       } )}
     </div>
-    <div style = ${useStyle({ gridColumn : 1 , gridRow : 1 , zIndex : 1 , backgroundColor : 'white' , display : 'grid', height : '100%' , gridTemplateColumns : '1fr min-content' , borderRadius : "15px" , boxShadow : '0px 0px 10px dimgray' , maxWidth : '1000px' })} >
+    <div id="sliderContainer">
       <section style = ${useStyle({ display : 'grid' , padding : "10px" , minHeight : '400px' , minWidth : '400px' })} >
         <div style = ${useStyle({ backgroundColor : '#f9ecb4' , display : 'grid' })} ${ref(container)} >
           ${useState( config , ( newConfig ) => {
