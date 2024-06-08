@@ -16,3 +16,8 @@ body {
 [name=icon]:hover{
   transform: scale(1.2);
 }
+
+polygon#XMLID_5471_,
+polygon#XMLID_5371_ {
+  fill: white;
+}

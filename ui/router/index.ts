@@ -60,8 +60,8 @@ class Application extends LitElement{
       >
         <header class = "header" style = ${useStyle({ display : 'grid' , padding : '5px 10px' , gap : '10px'})} >
           <div style = ${useStyle({ display : 'inline-flex' , gridColumn : 1 , gridRow : 1 , alignItems : 'center' , gap : '10px' , zIndex : 1 , pointerEvents : 'none' })}>
-            ${Icon( { svg : TGIcon } )}
-            ${Icon( { svg : XIcon } )}
+            ${Icon( { svg : TGIcon , mousedown : () => { window.open( "https://t.me/jeeterminatorsol" ) } } )}
+            ${Icon( { svg : XIcon , mousedown : () => { window.open( "https://x.com/JEETERMINATOR" ) } } )}
           </div>
           <div style = ${useStyle({ display : 'inline-flex' , gridColumn : 1 , gridRow : 1 , justifyContent : 'center' })}>
             <h1 style = ${useStyle({ padding : 0 , margin : 0 , cursor : "pointer" })} @mousedown=${() => { window.location.hash = '#/' }} >jeeterminator</h1>
